@@ -48,11 +48,19 @@ object baigorria {
 	
 	method pagarDeuda(){
 		deuda = dinero - deuda
-		
-		
 	}
+	
+method totalDinero(){
+	
+	return dinero
 }
 
+method totalDeuda(){
+	
+	return deuda
+	
+}	
+}
 object galvan {
 	var dinero = 300000
 	method dinero() { return dinero }
