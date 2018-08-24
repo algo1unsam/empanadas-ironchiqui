@@ -50,7 +50,7 @@ object baigorria {
 		deuda = dinero - deuda
 	}
 	
-method totalDinero(){
+method totalDinero(){ 
 	
 	return dinero
 }
