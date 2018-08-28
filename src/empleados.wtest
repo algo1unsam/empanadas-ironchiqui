@@ -32,3 +32,14 @@ test "baigorria cobra 1530 gasta 1000 y le quedan 500 de ahorros "{
 	assert.equals(0, baigorria.totalDeuda())
 	
 }
+
+test "cobra su sueldo de 1530 y gasta todo lo que cobro quedandose sin dinero pero tampoco sin deuda"{
+	
+	baigorria.venderEmpanada(1)
+	baigorria.venderEmpanada(1)
+	galvan.pagarA(baigorria)
+	baigorria.gastar(1530)
+	assert.equals(0, baigorria.totalDinero())
+	assert.equals(0, baigorria.totalDeuda())
+	
+}
