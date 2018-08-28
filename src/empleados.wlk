@@ -21,21 +21,23 @@ object gimenez {
 
 
 object baigorria {
-	var cantidadEmpanadasVendidas = 0
+	var cantidadEmpanadasVendidas = 100
 	var montoPorEmpanada = 15
 	var deuda = 0
 	var dinero= 0
 	method venderEmpanada(cant) {
 		cantidadEmpanadasVendidas += cant
+		
 	}
  	method cobrarSueldo(){
-	self.sueldo()
-	}
-	method sueldo() {
-	dinero = cantidadEmpanadasVendidas * montoPorEmpanada
-	
+	dinero = dinero + cantidadEmpanadasVendidas * montoPorEmpanada 
 	}
 	
+	method sueldo(){
+		 return cantidadEmpanadasVendidas * montoPorEmpanada 
+		
+		
+	}
 	method gastar(cant){
 		if (dinero < cant){
 			deuda = deuda + (cant -dinero)
@@ -65,7 +67,7 @@ object galvan {
 	var dinero = 300000
 	method dinero() { return dinero }
 	method pagarA( empleado ) { 
-		
+		empleado.cobrarSueldo()
 	 	dinero -= empleado.sueldo() 
 	 	
 	 	
